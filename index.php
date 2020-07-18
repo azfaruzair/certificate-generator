@@ -81,7 +81,7 @@ require('dynamic-details.php');
             html2canvas(document.getElementById('certificate')).then(function(canvas) {
                 var imageFile = canvas.toDataURL('image/jpeg',0.9);
                 function saveScreenshot(canvas) {
-                    let fileName = "image"
+                    let fileName = "certificate"
                     const link = document.createElement('a');
                     link.download = fileName + '.png';
                     console.log(canvas)
