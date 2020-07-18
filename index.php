@@ -14,19 +14,22 @@ require('dynamic-details.php');
 </head>
 <body class="background-img">
 
+
     <div class="certificate mt-4"> <!-- Certificate Wrapper -->
 
         <p class="certificate-header font-sora">This Certificate is Powered by Oyester Trainings</p>
 
-        <img src="assets/images/certificate.svg" alt="">
-        <div class="certificate-user-name">
-            <h1><?php echo $name;?></h1>
-        </div>
+        <div id="certificate">
+            <img src="assets/images/certificate.svg" alt="">
+            <div class="certificate-user-name">
+                <h1><?php echo $name;?></h1>
+            </div>
 
-        <div class="details-container"> 
-            has successfully completed 7-Days Hands-on Webinar on
-            <span><?php echo $course_name;?>.</span><br>
-            From: <span><?php echo $start_date;?></span> to <span><?php echo $end_date;?></span>
+            <div class="details-container"> 
+                has successfully completed 7-Days Hands-on Webinar on
+                <span><?php echo $course_name;?>.</span><br>
+                From: <span><?php echo $start_date;?></span> to <span><?php echo $end_date;?></span>
+            </div>
         </div>
 
     </div> <!-- Certificate Wrapper Ends -->
@@ -51,7 +54,7 @@ require('dynamic-details.php');
                 <span class="issue-id font-size-18 p-1">Issue Id: <span class="id"><?php echo $issue_id;?></span></span>
             </div>
 
-            <div class="buttons p-3">
+            <div class="buttons p-3" onclick="doCapture();">
                 <button class="btn p-1 m-1">
                     <i class="fad fa-download"></i>
                     Download
@@ -72,5 +75,25 @@ require('dynamic-details.php');
         <span>Copyright &copy; 2020 Oyesters Training All Rights Reserved.</span>
     </footer>
 
+    <script src="assets/js/html2canvas.js"></script>
+    <script>
+        function doCapture() {
+            html2canvas(document.getElementById('certificate')).then(function(canvas) {
+                var imageFile = canvas.toDataURL('image/jpeg',0.9);
+                function saveScreenshot(canvas) {
+                    let fileName = "image"
+                    const link = document.createElement('a');
+                    link.download = fileName + '.png';
+                    console.log(canvas)
+                    canvas.toBlob(function(blob) {
+                        console.log(blob)
+                        link.href = URL.createObjectURL(blob);
+                        link.click();
+                    });
+                };   
+                saveScreenshot(canvas);           
+            })
+        }
+    </script>
 </body>
 </html>
