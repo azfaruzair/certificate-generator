@@ -1,0 +1,161 @@
+/*********************************************************
+    BASIC SETTINGS
+*********************************************************/
+
+body {
+    font-family: sans-serif;
+    margin: auto;
+    width: 1366px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    color: #686868;
+}
+
+.background-img {
+    background-image: url('../images/whitebg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1300px) {
+    .background-img {
+        overflow: scroll !important;
+    }
+}
+
+/*********************************************************
+    CERTIFICATE CSS
+*********************************************************/
+
+.certificate {
+    margin: 5px 30px 0px;
+}
+
+.certificate .certificate-header {
+    position: fixed;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.521);
+    color: white; 
+    top: 0;
+    right: 0;
+    left: 0;
+    right: 0px;
+    margin: 0;
+    padding: 10px;
+}
+
+.certificate .certificate-user-name {
+    position: relative;
+    top: -313px;
+    left: 140px;
+    width: 540px;
+    text-align: center;
+}
+
+.certificate .certificate-user-name h1 {
+    color: #2CBCEE !important;
+    font-weight: bold;
+}
+
+.certificate .details-container {
+    width: 401px;
+    height: 59px;
+    position: relative;
+    margin: 0;
+    bottom: 300px;
+    left: 210px;
+    text-align: center;
+    font-weight: 600 !important;
+}
+
+
+
+/*********************************************************
+    RIGHT SIDE BAR CSS
+*********************************************************/
+
+.right-side-bar {
+    width: 300px;
+    background: white;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0);
+    padding: 50px 0px;
+}
+
+.right-side-bar .content {
+    margin: 0px 10px;
+    height: 100%;
+}
+
+.right-side-bar .content .user-name, .about-course {
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0);
+    height: 70px;
+    border-radius: 5px;
+}
+
+.right-side-bar .content .user-name .name{ 
+    position: relative;
+    top: -35px;
+    left: 0px;
+}
+
+.right-side-bar .content .about-course {
+    height: auto;
+}
+
+.right-side-bar .content .about-course .course-title, .issue-date , .issue-id{
+    color: purple;
+    text-align: center;
+}
+
+.right-side-bar .content .about-course .course-title {
+    border: 1px solid purple;
+    border-radius: 3px;
+}
+
+.right-side-bar .content .about-course .date, .id{
+    color: black;
+}
+
+.right-side-bar .content .buttons{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-side-bar .content .buttons .btn{ 
+    width: 100px;
+    color: white;
+    border: none;
+    background: rgb(111, 18, 177);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.466);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.right-side-bar .content .buttons .btn i{ 
+    float: left;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 300px;
+    left: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.521);
+    width: 100%;
+    color: white;
+    padding: 5px;
+}

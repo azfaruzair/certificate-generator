@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Sora:wght@600&display=swap');
+
+.font-sora {
+    font-family: 'Sora', sans-serif;
+}
+
+.font-pacifico {
+    font-family: 'Pacifico', sans-serif;
+}
+
+.left-align {
+    text-align: left;
+}
